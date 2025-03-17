@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manutenção de Máquinas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script defer src="manutencao.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Histórico à esquerda -->
+      <div class="historico-card">
+        <h2>Histórico de Manutenções</h2>
+        <div id="historico"></div>
+      </div>
+
+      <!-- Formulário à direita -->
+      <div class="form-card">
+        <h1>Registro de Manutenção</h1>
+
+        <label for="maquina">Máquina:</label>
+        <select id="maquina">
+          <option value="Torno CNC">Torno CNC</option>
+          <option value="Injetora">Injetora</option>
+          <option value="Extrusora">Extrusora</option>
+          <option value="Sopradora">Sopradora</option>
+        </select>
+
+        <!-- Alteração feita aqui: Substituir o campo de seleção por uma área de texto -->
+        <label for="descricao">Descrição da Manutenção:</label>
+        <textarea
+          id="descricao"
+          placeholder="Digite o que foi realizado na manutenção..."
+          rows="5"
+        ></textarea>
+
+        <label for="responsavel">Nome do Responsável:</label>
+        <input type="text" id="responsavel" placeholder="Digite o nome..." />
+
+        <label for="tempoProxima">Tempo para próxima manutenção:</label>
+        <select id="tempoProxima">
+          <option value="Dia Seguinte">Diária</option>
+          <option value="7 dias">7 dias</option>
+          <option value="30 dias">30 dias</option>
+          <option value="60 dias">60 dias</option>
+          <option value="90 dias">90 dias</option>
+        </select>
+
+        <button id="salvarBtn">Salvar Manutenção</button>
+      </div>
+    </div>
+  </body>
+</html>

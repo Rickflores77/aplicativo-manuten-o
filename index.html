@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login e Registro - Manutenção de Máquina</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <!-- Alternador entre Login e Registro -->
+        <div class="toggle">
+          <button id="btnLogin" class="active">Login</button>
+          <button id="btnRegister">Registrar</button>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form id="login-form">
+          <h2>Login</h2>
+          <div class="textbox">
+            <input
+              type="email"
+              id="login-email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div class="textbox">
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Senha"
+              required
+            />
+          </div>
+          <input type="submit" value="Entrar" />
+        </form>
+
+        <!-- Formulário de Registro -->
+        <form id="register-form" style="display: none">
+          <h2>Registrar</h2>
+          <div class="textbox">
+            <input
+              type="email"
+              id="register-email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div class="textbox">
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Senha"
+              required
+            />
+          </div>
+          <input type="submit" value="Cadastrar" />
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

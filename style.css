@@ -1,0 +1,144 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  background-color: #a9a9a9; /* Cinza */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container principal */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Caixa de Login/Registro */
+.login-box {
+  background-color: #ff4500; /* Laranja avermelhado */
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+
+/* Título */
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Estilos para os botões de alternância */
+.toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #ff4500;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.toggle button.active {
+  background: #ff4500;
+  color: white;
+}
+
+/* Campos de entrada */
+.textbox {
+  margin-bottom: 15px;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  color: #333;
+  transition: border 0.3s;
+}
+
+.textbox input:focus {
+  border-color: #ff4500;
+  outline: none;
+}
+
+/* Botão de envio */
+input[type="submit"] {
+  background-color: white;
+  color: #ff4500;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #a9a9a9;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .login-box {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .toggle button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* Estilo básico para o Toast */
+/* Toasts de Sucesso e Erro */
+.toast {
+  background-color: #4CAF50; /* Verde (para sucesso) */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: absolute; /* Posiciona abaixo da caixa de login */
+  bottom: 50px; /* Distância de 50px da parte inferior */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza corretamente */
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.toast.erro {
+  background-color: #FF4C4C; /* Vermelho (para erro) */
+}
+
+.toast.sucesso {
+  background-color: #4CAF50; /* Verde (para sucesso) */
+}
+
+/* Quando o toast desaparecer */
+.toast.hide {
+  opacity: 0;
+}
